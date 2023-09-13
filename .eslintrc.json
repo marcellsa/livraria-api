@@ -1,7 +1,9 @@
 {
     "env": {
+        "node": true,
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "jest": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
@@ -9,21 +11,41 @@
         "sourceType": "module"
     },
     "rules": {
-        "indent": [
-            "error",
-            2
-        ],
-        "linebreak-style": [
-            "error",
-            "windows"
-        ],
-        "quotes": [
-            "error",
-            "double"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ]
+        // Estilo e formatação de código
+        "indent": ["error", 2], // Usar 2 espaços de indentação
+        "linebreak-style": ["error", "windows"], // Estilo de quebra de linha no Windows
+        "quotes": ["error", "double"], // Usar aspas duplas para strings
+        "semi": ["error", "always"], // Sempre usar ponto e vírgula
+    
+        // Regras adicionais para boas práticas ES6
+        "arrow-parens": ["error", "always"], // Sempre usar parênteses com parâmetros de função de seta
+        "arrow-spacing": "error", // Espaçamento consistente em funções de seta
+        "no-const-assign": "error", // Evitar reatribuição de variáveis constantes
+        "prefer-const": "error", // Preferir 'const' quando possível
+        "no-var": "error", // Evitar o uso de 'var', preferir 'let' ou 'const'
+        "prefer-arrow-callback": "error", // Preferir funções de seta como callbacks
+        "rest-spread-spacing": ["error", "never"], // Espaçamento consistente para operadores de espalhamento
+        "template-curly-spacing": ["error", "never"], // Espaçamento consistente em literais de modelo
+        "prefer-destructuring": "error", // Incentivar o uso de desestruturação quando apropriado
+    
+        // Regras adicionais para complexidade e tamanho do código
+        "complexity": ["error", 20], // Limite máximo de complexidade ciclomática
+        "max-params": ["error", 3], // Limite máximo de parâmetros por função
+        "max-lines": ["error", 300], // Limite máximo de linhas no arquivo
+        "max-lines-per-function": ["error", 50], // Limite máximo de linhas por função
+        "max-len": ["error", { "code": 120 }], // Limite máximo de comprimento de linha
+    
+        // Outras regras úteis
+        "no-unused-vars": "error", // Variáveis não utilizadas
+        "no-undef": "error", // Variáveis usadas antes de serem declaradas
+        "no-unused-expressions": "error", // Expressões não utilizadas
+        "no-restricted-syntax": ["error", "WithStatement"], // Restringir uso de 'with'
+        "no-underscore-dangle": "error", // Proibir underscore no início/final de nomes
+        "prefer-template": "error", // Preferir template literals a concatenação
+        "no-restricted-globals": ["error", "eval"], // Restringir uso de eval
+        "no-mixed-operators": "error", // Evitar precedência de operadores mistos
+        "no-useless-constructor": "error", // Construtores inúteis
+        "no-extra-parens": "error", // Parênteses desnecessários
+        "no-multiple-empty-lines": ["error", { "max": 1 }] // Não permitir mais de uma linha em branco
     }
 }
