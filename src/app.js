@@ -1,5 +1,6 @@
 import express from "express";
 import connectToDatabase from "./config/dbConnect.js";
+import routes from "./routes/index.js";
 
 const connection = await connectToDatabase();
 
@@ -11,12 +12,7 @@ connection.once("open", () => {
 
 // A função 'express' atribui todas as funções do Express à variável 'app'
 const app = express();
-// O middleware converte e analisa requisições JSON com objetos ou arrays de objetos
-app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.status(200).send("API Rest com Express e MongoDB");
-});
+routes(app);
 
 // Exportar o módulo 'app' para comunicação com o servidor
 export default app;
