@@ -27,13 +27,15 @@ describe("Testando rota livros", () => {
   test("Deve retornar livros", async() => {
     // given - dado que
     const livro1 = await livroController.cadastrarLivro({
-      titulo: generateRandomString(10), 
+      titulo: generateRandomString(20), 
+      autor: generateRandomString(5), 
       editora: generateRandomString(10), 
       preco: generateRandomFloat(0,100), 
       paginas: generateRandomNumber(99,500)
     });
     const livro2 = await livroController.cadastrarLivro({
-      titulo: generateRandomString(10), 
+      titulo: generateRandomString(20),
+      autor: generateRandomString(5), 
       editora: generateRandomString(10), 
       preco: generateRandomFloat(0,100), 
       paginas: generateRandomNumber(99,500)
@@ -44,6 +46,6 @@ describe("Testando rota livros", () => {
     const livros = response.data;
 
     // then - então
-    expect(livros).toHaveLength(1);
+    expect(livros).toHaveLength(3);
   });
 });
