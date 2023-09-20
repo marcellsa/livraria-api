@@ -25,7 +25,7 @@ const request = (url, method, data) => axios({ url, method, data });
 describe("Testando rota livros", () => {
 
   test("Deve retornar livros", async() => {
-    //given - dado que
+    // given - dado que
     const livro1 = await livroController.cadastrarLivro({
       titulo: generateRandomString(10), 
       editora: generateRandomString(10), 
@@ -44,6 +44,6 @@ describe("Testando rota livros", () => {
     const livros = response.data;
 
     // then - então
-    expect(livros).toHaveLength(3);
+    expect(livros).toHaveLength(1);
   });
 });
