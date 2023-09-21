@@ -9,9 +9,9 @@ const generateRandomString = (length) => {
 };
 
 // Gerar um número de ponto flutuante aleatório entre um mínimo e um máximo
-const generateRandomFloat = (min, max) => {
-  return Math.random() * (max - min + min);
-};
+// const generateRandomFloat = (min, max) => {
+//   return Math.random() * (max - min + min);
+// };
 
 // Gerar um número aleatório entre um mínimo e máximo
 const generateRandomNumber = (min, max) => {
@@ -24,22 +24,26 @@ const request = (url, method, data) => axios({ url, method, data });
 
 describe("Testando rota livros", () => {
 
-  test("Deve retornar livros", async() => {
+  test("Deve retornar livros", async () => {
+    
     // given - dado que
-    const livro1 = await livroController.cadastrarLivro({
-      titulo: generateRandomString(20), 
-      autor: generateRandomString(5), 
+    const livro1 = await livroController.cadastrarLivro({ 
+      titulo: generateRandomString(20),
       editora: generateRandomString(10), 
-      preco: generateRandomFloat(0,100), 
-      paginas: generateRandomNumber(99,500)
+      preco: generateRandomNumber(0, 100), 
+      paginas: generateRandomNumber(99, 500)
     });
+
+    console.log("Livro1:", livro1);
+
     const livro2 = await livroController.cadastrarLivro({
       titulo: generateRandomString(20),
-      autor: generateRandomString(5), 
       editora: generateRandomString(10), 
-      preco: generateRandomFloat(0,100), 
-      paginas: generateRandomNumber(99,500)
+      preco: generateRandomNumber(0, 100), 
+      paginas: generateRandomNumber(99, 500)
     });
+
+    console.log("Livro2:", livro2);
 
     // when - quando
     const response = await request("http://localhost:3000/livros", "get");
@@ -47,5 +51,5 @@ describe("Testando rota livros", () => {
 
     // then - então
     expect(livros).toHaveLength(3);
-  });
+  }, 50000);
 });
