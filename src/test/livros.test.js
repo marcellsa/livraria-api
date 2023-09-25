@@ -1,7 +1,7 @@
 import crypto from "crypto";
 import axios from "axios";
-// import livroController from "../controllers/livroController.js";
-import livroModel from "../models/Livro.js";
+// import { describe, expect, test } from "@jest/globals";
+import livro from "../models/Livro.js";
 
 // Gerar uma string aleatória de comprimento específico
 const generateRandomString = (length) => {
@@ -28,15 +28,13 @@ describe("Testando rota livros", () => {
   test("Deve retornar livros", async () => {
     
     // given - dado que
-    const livro1 = await livroModel.create({ 
+    await livro.create({ 
       titulo: generateRandomString(20),
       editora: generateRandomString(10), 
       preco: generateRandomNumber(0, 100), 
       paginas: generateRandomNumber(99, 500)
     });
-
-    console.log("Livro1:", livro1);
-
+  
     // const livro2 = await livroController.cadastrarLivro({
     //   titulo: generateRandomString(20),
     //   editora: generateRandomString(10), 
@@ -44,13 +42,11 @@ describe("Testando rota livros", () => {
     //   paginas: generateRandomNumber(99, 500)
     // });
 
-    console.log("Livro2:", livro2);
-
     // when - quando
     const response = await request("http://localhost:3000/livros", "get");
     const livros = response.data;
 
     // then - então
-    expect(livros).toHaveLength(3);
+    expect(livros).toHaveLength(1);
   }, 5000);
 });

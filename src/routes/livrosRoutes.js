@@ -1,9 +1,10 @@
 import express from "express";
 import LivroController from "../controllers/livroController.js";
 
-const routes = express.Router();
+const router = express.Router();
 
-routes.get("/livros", LivroController.listarLivros);
-routes.post("/livros", LivroController.cadastrarLivro);
+router
+  .get("/livros", LivroController.listarLivros)
+  .post("/livros", LivroController.cadastrarLivro);
 
-export default routes;
+export default router;
