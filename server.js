@@ -1,3 +1,4 @@
+// Isso permite que o Dotenv configure as variáveis de ambiente
 import "dotenv/config";
 import app from "./src/app.js";
 
