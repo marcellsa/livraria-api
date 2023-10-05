@@ -32,6 +32,10 @@ describe("Testando o modelo Livro", () => {
     expect(book).toEqual(
       expect.objectContaining(objetoLivro),
     );
+    expect(book).toHaveProperty("titulo");
+    expect(book).toHaveProperty("editora");
+    expect(book).toHaveProperty("preco");
+    expect(book).toHaveProperty("paginas");
   });
 
 });
