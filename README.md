@@ -2,10 +2,10 @@
 
 Esta é uma API de livraria construída com Express.js, MongoDB e Mongoose que permite realizar operações CRUD (Create, Read, Update, Delete) em livros.
 
-[![Node.js](https://img.shields.io/badge/Node.js-14.x-green)](https://nodejs.org/)
-[![Express.js](https://img.shields.io/badge/Express.js-4.x-blue)](https://expressjs.com/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-4.x-green)](https://www.mongodb.com/)
-[![Mongoose](https://img.shields.io/badge/Mongoose-5.x-blue)](https://mongoosejs.com/)
+![Build](https://img.shields.io/badge/build-in%20progress-blue)
+![Test](https://img.shields.io/badge/tests-in%20progress-blue)
+![Coverage](https://img.shields.io/badge/coverage-0%25-lightgrey)
+
 
 ## ⚙️ Status do Projeto
 
@@ -23,9 +23,19 @@ Esta é uma API de livraria construída com Express.js, MongoDB e Mongoose que p
 
 Certifique-se de ter as seguintes ferramentas instaladas em seu sistema:
 
-- [Node.js](https://nodejs.org/) (v14.x ou superior)
-- [MongoDB](https://www.mongodb.com/) (v4.x ou superior)
-- [npm](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/)
+![JavaScript](https://img.shields.io/badge/-JavaScript-yellow)
+![Node.js](https://img.shields.io/badge/-Node.js-green)
+![Express](https://img.shields.io/badge/-Express-lightgrey)
+![MongoDB](https://img.shields.io/badge/-MongoDB-green)
+![Mongoose](https://img.shields.io/badge/-Mongoose-green)
+![Git](https://img.shields.io/badge/-Git-red)
+![GitHub](https://img.shields.io/badge/-GitHub-black)
+![Jest](https://img.shields.io/badge/-Jest-red)
+![ESLint](https://img.shields.io/badge/-ESLint-purple)
+![MVC](https://img.shields.io/badge/-MVC-lightgrey)
+![REST API](https://img.shields.io/badge/-REST%20API-green)
+![JSON](https://img.shields.io/badge/-JSON-orange)
+
 
 ## 📦 Instalação e Configuração
 
