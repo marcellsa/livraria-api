@@ -52,28 +52,28 @@ Esta é uma API de livraria construída com Express.js, MongoDB e Mongoose que p
 
 2. Instale as dependências:
 
-  ```shell
+   ```shell
    npm install
 
 3. Configure as variáveis de ambiente em um arquivo .env na raiz do projeto. Exemplo:
 
-  ```shell
-  PORT=3000
-  MONGODB_URI=mongodb://localhost/livraria
+   ```shell
+   PORT=3000
+   MONGODB_URI=mongodb://localhost/livraria
 
 
 ## ▶️ Como Rodar a Aplicação
 
 4. Inicie o servidor:
 
-  ```shell
+   ```shell
    npm run dev
 
 ## 🧪 Como Rodar os Testes
 
 5. Como executar os testes do projeto:
 
-  ```shell
+   ```shell
    npm run test
   
 
