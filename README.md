@@ -58,8 +58,8 @@ Esta é uma API de livraria construída com Express.js, MongoDB e Mongoose que p
 3. Configure as variáveis de ambiente em um arquivo .env na raiz do projeto. Exemplo:
 
    ```shell
-   PORT=3000
-   MONGODB_URI=mongodb://localhost/livraria
+   APP_PORT=3000
+   DB_CONNECTION_STRING=mongodb://localhost/livraria
 
 
 ## ▶️ Como Rodar a Aplicação
@@ -75,15 +75,7 @@ Esta é uma API de livraria construída com Express.js, MongoDB e Mongoose que p
 
    ```shell
    npm run test
-  
 
-## 🛢️ Database
-
-Forneça informações sobre a configuração e o uso do banco de dados, se aplicável.
-
-## 🛠️ Solução de Problemas
-
-Liste problemas comuns que os usuários podem encontrar e forneça soluções ou links para recursos adicionais.
 
 ## 💻 Tecnologias Utilizadas
 
