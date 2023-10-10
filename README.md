@@ -27,6 +27,7 @@ Esta é uma API de livraria construída com Express.js, MongoDB e Mongoose que p
 - [Autor](#autor)
 - [Licença](#licença)
 
+
 ## 🚀 Funcionalidades
 
 - Adicionar um novo livro à livraria.
@@ -34,6 +35,7 @@ Esta é uma API de livraria construída com Express.js, MongoDB e Mongoose que p
 - Buscar um livro por ID.
 - Atualizar informações de um livro existente.
 - Excluir um livro da livraria.
+
 
 ## ⚙️ Pré-requisitos
 
@@ -69,6 +71,7 @@ Esta é uma API de livraria construída com Express.js, MongoDB e Mongoose que p
    ```shell
    npm run dev
 
+
 ## 🧪 Como Rodar os Testes
 
 5. Como executar os testes do projeto:
@@ -94,11 +97,13 @@ Esta é uma API de livraria construída com Express.js, MongoDB e Mongoose que p
 ![JSON](https://img.shields.io/badge/-JSON-orange)
 
 
+## 📄 Licença
+
+[![Licença MIT](https://img.shields.io/badge/licença-MIT-blue)](link-para-licença-MIT)
+
+
 ## 📝 Autor
 
 ✉️ msalbuquerque@hotmail.com
 💼 [LinkedIn](https://linkedin.com/in/marcellsa)
 
-## 📄 Licença
-
-[![Licença MIT](https://img.shields.io/badge/licença-MIT-blue)](link-para-licença-MIT)
