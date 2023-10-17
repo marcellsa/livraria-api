@@ -97,13 +97,13 @@ Esta é uma API de livraria construída com Express.js, MongoDB e Mongoose que p
 ![JSON](https://img.shields.io/badge/-JSON-orange)
 
 
-## 📄 Licença
-
-[![Licença MIT](https://img.shields.io/badge/licença-MIT-blue)](link-para-licença-MIT)
-
-
 ## 📝 Autor
 
 ✉️ msalbuquerque@hotmail.com
 💼 [LinkedIn](https://linkedin.com/in/marcellsa)
+
+
+## 📄 Licença
+
+[![Licença MIT](https://img.shields.io/badge/licença-MIT-blue)](link-para-licença-MIT)
 
