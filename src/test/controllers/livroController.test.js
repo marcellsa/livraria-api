@@ -1,44 +1,29 @@
 import request from "supertest";
-import app from "../../app.js";
-import LivroController from "../../controllers/livroController.js";
+import app from "../src/app";
+import mongoose from "mongoose";
+import Livro from "../models/Livro";
 
-describe("Testes para LivroController", () => {
-  // let booksList;
+describe("Testes para o LivroController", () => {
+  
+  it("Deve listar livros com sucesso", async () => {
+    await Livro.create({ titulo: "Livro 1" });
 
-  beforeAll(() => {
-    // Configurar o controlador com alguns livros de teste uma vez antes dos testes
-    const livrosDeTeste = [
-      {
-        titulo: "Livro de Teste 1",
-        editora: "Editora de Teste 1",
-        preco: 19.99,
-        paginas: 100,
-      },
-      {
-        titulo: "Livro de Teste 2",
-        editora: "Editora de Teste 2",
-        preco: 29.99,
-        paginas: 200,
-      }
-    ];
-    booksList = new LivroController(livrosDeTeste);
+    const response = await request(app).get("/api/livros");
+
+    expect(response.status).toBe(200);
+    expect(response.body.length).toBe(1);
+    expect(response.body[0].titulo).toBe("Livro 1");
   });
 
-  // it.skip("deve retornar uma lista vazia quando não há livros", async () => {
-  //   const response = await request(app)
-  //     .get("/livros")
-  //     .expect(200);
+  it.skip("Deve tratar erros ao listar livros", async () => {
+    // Simule um erro no controlador
+    jest.spyOn(Livro, "find").mockImplementationOnce(() => {
+      throw new Error("Erro simulado");
+    });
 
-  //   expect(response.body).toHaveLength(0);
-  // });
+    const response = await request(app).get("/api/livros");
 
-  it("deve listar todos os livros na base de dados", async () => {
-    const response = await request(app)
-      .get("/livros")
-      .expect(200);
-
-    expect(response.body).not.toHaveLength(0);
+    expect(response.status).toBe(500);
+    expect(response.body).toEqual({ message: "Erro simulado - falha na requisição" });
   });
-
-  // Outros testes para outros métodos da classe LivroController
 });
