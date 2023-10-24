@@ -3,7 +3,7 @@ import app from "../../app.js";
 import LivroController from "../../controllers/livroController.js";
 
 describe("Testes para LivroController", () => {
-  let booksList; // Declare a variável fora dos testes
+  // let booksList;
 
   beforeAll(() => {
     // Configurar o controlador com alguns livros de teste uma vez antes dos testes
@@ -24,13 +24,13 @@ describe("Testes para LivroController", () => {
     booksList = new LivroController(livrosDeTeste);
   });
 
-  it.skip("deve retornar uma lista vazia quando não há livros", async () => {
-    const response = await request(app)
-      .get("/livros")
-      .expect(200);
+  // it.skip("deve retornar uma lista vazia quando não há livros", async () => {
+  //   const response = await request(app)
+  //     .get("/livros")
+  //     .expect(200);
 
-    expect(response.body).toHaveLength(0);
-  });
+  //   expect(response.body).toHaveLength(0);
+  // });
 
   it("deve listar todos os livros na base de dados", async () => {
     const response = await request(app)
